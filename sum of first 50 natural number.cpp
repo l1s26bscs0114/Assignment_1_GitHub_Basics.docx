@@ -9,19 +9,36 @@
 using namespace std;
 
 int main() {
-    const int N = 50;
+
+    int number = 50;
     int sum = 0;
 
-    // Method 1: add numbers one by one using a loop
-    for (int i = 1; i <= N; i++) {
-        sum += i;
+    // Calculate the sum using a for loop
+    for (int i = 1; i <= number; i++) {
+        sum = sum + i;
     }
-    cout << "Sum of first " << N << " natural numbers (loop): " << sum << endl;
 
-    // Method 2: verify using the formula n(n+1)/2
-    int formulaSum = N * (N + 1) / 2;
-    cout << "Sum using formula n(n+1)/2: " << formulaSum << endl;
+    // Display the result
+    cout << "====================================" << endl;
+    cout << "   SUM OF NATURAL NUMBERS" << endl;
+    cout << "====================================" << endl;
+
+    cout << "Numbers: 1 to " << number << endl;
+    cout << "Sum using loop: " << sum << endl;
+
+    // Calculate the sum using formula
+    int formula = number * (number + 1) / 2;
+
+    cout << "Sum using formula: " << formula << endl;
+
+    // Check both results
+    if (sum == formula) {
+        cout << "Result verified successfully!" << endl;
+    } else {
+        cout << "Results do not match." << endl;
+    }
+
+    cout << "====================================" << endl;
 
     return 0;
 }
-
